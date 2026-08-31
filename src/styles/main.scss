@@ -1,3 +1,776 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
+
+  color: #161616;
+  background-color: #fff;
+
+  font-family: Arial, sans-serif;
+}
+
+img {
+  display: block;
+
+  width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+/* HEADER */
+
+.header {
+  width: 100%;
+  height: 568px;
+  padding: 25px 20px;
+
+  color: #fff;
+
+  background-image: url('../images/header.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: #fff;
+
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 15px;
+  text-decoration: none;
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.header__phone,
+.header__menu-button {
+  color: #fff;
+
+  font-size: 18px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.header__title {
+  margin: 145px auto 0;
+
+  color: #fff;
+
+  font-family: Georgia, serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+}
+
+/* MENU */
+
+.menu {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  width: 100%;
+  min-height: 100vh;
+  padding: 25px 20px;
+
+  color: #fff;
+  background-color: #d12d35;
+
+  transform: translateY(-110%);
+  transition: transform 0.3s;
+}
+
+.menu:target {
+  transform: translateY(0);
+}
+
+.menu__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.menu__close {
+  color: #fff;
+
+  font-size: 32px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.menu__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  max-width: 1020px;
+  margin: 50px auto 0;
+}
+
+.menu__nav a {
+  color: #fff;
+
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.menu__contacts {
+  max-width: 1020px;
+  margin: 40px auto 0;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.menu__contacts a {
+  display: inline-block;
+
+  margin-top: 8px;
+  padding-bottom: 6px;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid #fff;
+}
+
+/* MAIN */
+
+.main {
+  width: 100%;
+}
+
+.section-title {
+  margin: 0;
+
+  font-family: Georgia, serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+}
+
+.section-title--left {
+  text-align: left;
+}
+
+.section-description {
+  margin: 8px 0 40px;
+
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+}
+
+/* MUSEUM HOURS */
+
+.museum-hours {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+}
+
+.museum-hours__subtitle {
+  margin: 0;
+
+  color: #d12d35;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.museum-hours .section-title {
+  margin: 2px 0 32px;
+
+  font-size: 28px;
+  line-height: 32px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.museum-hours__place {
+  margin: 0 0 16px;
+
+  font-family: Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.museum-hours__row {
+  display: flex;
+  align-items: flex-start;
+
+  margin-bottom: 8px;
+
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.museum-hours__row strong {
+  flex-shrink: 0;
+
+  width: 128px;
+}
+
+.museum-hours__closed {
+  margin: 16px 0 28px;
+
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.museum-hours__closed:last-child {
+  margin-bottom: 0;
+}
+
+/* NOW ON VIEW */
+
+.now-on-view {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 20px 72px;
+}
+
+.now-on-view .section-title {
+  margin: 0;
+
+  font-size: 32px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.now-on-view .section-description {
+  max-width: 280px;
+  margin: 8px auto 40px;
+
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.exhibition {
+  margin-bottom: 40px;
+}
+
+.exhibition__gallery {
+  display: grid;
+  gap: 8px;
+
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.exhibition__gallery--two {
+  grid-template-columns: 2fr 1fr;
+}
+
+.exhibition__gallery--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.exhibition__gallery img {
+  width: 100%;
+  height: 130px;
+
+  object-fit: cover;
+}
+
+.red-title {
+  margin: 0 0 4px;
+
+  color: #d12d35;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.exhibition__date {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* BUTTON */
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 56px;
+
+  color: #fff;
+  background-color: #d12d35;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+
+  border: 0;
+  cursor: pointer;
+}
+
+.now-on-view .button {
+  width: 100%;
+  height: 56px;
+  margin: 0;
+
+  font-size: 14px;
+}
+
+/* MORE TO EXPLORE */
+
+.explore {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 20px 64px;
+}
+
+.explore .section-title {
+  max-width: 200px;
+  margin: 0 auto 28px;
+
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+}
+
+.explore-card {
+  margin: 0 0 40px;
+
+  text-align: center;
+}
+
+.explore-card:last-child {
+  margin-bottom: 0;
+}
+.explore-card__image {
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+.explore-card__title {
+  margin: 12px 0 6px;
+
+  color: #d12d35;
+
+  font-family: Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+}
+
+.explore-card__text {
+  max-width: 250px;
+  margin: 0 auto;
+
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  line-height: 15px;
+  text-align: center;
+}
+
+/* CONTACTS */
+
+.contacts {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 20px 72px;
+}
+
+.contacts .section-title {
+  margin-bottom: 40px;
+
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.contacts__place {
+  margin-bottom: 32px;
+
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.contacts__place h3 {
+  margin: 0 0 16px;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.contacts__place p {
+  margin: 0 0 8px;
+}
+
+.contacts__place a {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: #161616;
+
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contacts__label {
+  margin-bottom: 4px;
+
+  color: #7e7e83;
+
+  font-size: 10px;
+  line-height: 14px;
+}
+
+/* FORM */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin-top: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+
+  color: #161616;
+  background-color: #f8f8fa;
+
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+
+  border: 0;
+  outline: none;
+}
+
+.contact-form input {
+  height: 48px;
+}
+
+.contact-form textarea {
+  height: 144px;
+
+  resize: none;
+}
+
+.contact-form .button {
+  margin-top: 16px;
+}
+
+/* FOOTER */
+
+.footer {
+  width: 100%;
+}
+
+.footer img {
+  width: 100%;
+  height: 180px;
+
+  object-fit: cover;
+}
+
+/* TABLET */
+
+@media (min-width: 744px) {
+  .header {
+    height: 620px;
+    padding: 40px 72px;
+
+    background-position: center;
+    background-size: cover;
+  }
+
+  .logo {
+    font-size: 26px;
+    line-height: 21px;
+  }
+
+  .header__phone,
+  .header__menu-button {
+    font-size: 26px;
+  }
+
+  .header__title {
+    margin-top: 170px;
+
+    font-size: 56px;
+    line-height: 56px;
+  }
+
+  .menu {
+    padding: 40px 72px;
+  }
+
+  .menu__nav {
+    margin-top: 60px;
+  }
+
+  .menu__nav a {
+    font-size: 22px;
+  }
+
+  .museum-hours,
+  .now-on-view,
+  .explore,
+  .contacts {
+    padding-right: 72px;
+    padding-left: 72px;
+  }
+
+  .museum-hours {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+
+  .museum-hours .section-title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .section-title {
+    font-size: 42px;
+    line-height: 44px;
+  }
+
+  .now-on-view .section-title,
+  .explore .section-title,
+  .contacts .section-title {
+    font-size: 42px;
+    line-height: 44px;
+  }
+
+  .section-description {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .exhibition {
+    margin-bottom: 56px;
+  }
+
+  .exhibition__gallery {
+    gap: 16px;
+  }
+
+  .exhibition__gallery img {
+    height: 220px;
+  }
+
+  .red-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .exhibition__date {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .button {
+    max-width: 324px;
+    margin: 0 auto;
+  }
+
+  .explore .section-title {
+    max-width: none;
+  }
+
+  .explore-card__image {
+    height: 360px;
+  }
+
+  .explore-card__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .explore-card__text {
+    max-width: 420px;
+
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .contacts .section-title {
+    grid-column: 1 / -1;
+  }
+
+  .contact-form {
+    grid-column: 1 / -1;
+
+    margin-top: 0;
+  }
+
+  .footer img {
+    height: 300px;
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+  .header {
+    height: 650px;
+    padding: 40px 100px;
+
+    background-position: center 38%;
+  }
+
+  .header__top {
+    max-width: 1020px;
+  }
+
+  .header__title {
+    margin-top: 150px;
+
+    font-size: 58px;
+    line-height: 60px;
+  }
+
+  .museum-hours {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .museum-hours .section-title {
+    font-size: 38px;
+    line-height: 42px;
+  }
+
+  .museum-hours__place {
+    font-size: 17px;
+  }
+
+  .museum-hours__row {
+    font-size: 13px;
+  }
+
+  .now-on-view {
+    padding-bottom: 90px;
+  }
+
+  .now-on-view .section-title,
+  .explore .section-title,
+  .contacts .section-title {
+    font-size: 46px;
+    line-height: 48px;
+  }
+
+  .exhibition__gallery {
+    gap: 20px;
+  }
+
+  .exhibition__gallery img {
+    height: 280px;
+  }
+
+  .explore {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    padding-bottom: 100px;
+  }
+
+  .explore .section-title {
+    grid-column: 1 / -1;
+
+    margin-bottom: 30px;
+  }
+
+  .explore-card {
+    margin-bottom: 0;
+  }
+
+  .explore-card__image {
+    height: 300px;
+  }
+
+  .explore-card__title {
+    font-size: 18px;
+  }
+
+  .explore-card__text {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .contacts {
+    grid-template-columns: 1fr 1fr 1.3fr;
+
+    padding-bottom: 100px;
+  }
+
+  .contact-form {
+    grid-column: auto;
+  }
+
+  .footer img {
+    height: 360px;
+  }
 }
