@@ -391,6 +391,7 @@ a {
 .explore-card:last-child {
   margin-bottom: 0;
 }
+
 .explore-card__image {
   width: 100%;
   height: auto;
@@ -577,19 +578,19 @@ a {
   }
 
   .museum-hours {
-    padding-top: 80px;
-    padding-bottom: 90px;
-  }
+  padding-top: 80px;
+  padding-bottom: 90px;
+}
 
-  .museum-hours .section-title {
-    font-size: 36px;
-    line-height: 40px;
-  }
+.section-title {
+  font-size: 42px;
+  line-height: 44px;
+}
 
-  .section-title {
-    font-size: 42px;
-    line-height: 44px;
-  }
+.museum-hours .section-title {
+  font-size: 36px;
+  line-height: 40px;
+}
 
   .now-on-view .section-title,
   .explore .section-title,
