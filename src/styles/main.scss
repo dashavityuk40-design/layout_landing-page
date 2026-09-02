@@ -17,7 +17,6 @@ body {
 
 img {
   display: block;
-
   width: 100%;
 }
 
@@ -30,7 +29,7 @@ a {
 .header {
   width: 100%;
   height: 568px;
-  padding: 25px 20px;
+  padding: 24px 20px;
 
   color: #fff;
 
@@ -46,7 +45,6 @@ a {
   justify-content: space-between;
 
   width: 100%;
-  max-width: 1020px;
   margin: 0 auto;
 }
 
@@ -81,9 +79,9 @@ a {
   color: #fff;
 
   font-family: Georgia, serif;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 32px;
+  line-height: 38px;
   text-align: center;
 }
 
@@ -92,13 +90,11 @@ a {
 .menu {
   position: fixed;
   z-index: 20;
-  top: 0;
-  right: 0;
-  left: 0;
+  inset: 0;
 
   width: 100%;
   min-height: 100vh;
-  padding: 25px 20px;
+  padding: 24px 20px;
 
   color: #fff;
   background-color: #d12d35;
@@ -116,14 +112,13 @@ a {
   align-items: flex-start;
   justify-content: space-between;
 
-  max-width: 1020px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .menu__close {
   color: #fff;
 
-  font-size: 32px;
+  font-size: 30px;
   line-height: 20px;
   text-decoration: none;
 }
@@ -133,8 +128,7 @@ a {
   flex-direction: column;
   gap: 24px;
 
-  max-width: 1020px;
-  margin: 50px auto 0;
+  margin-top: 48px;
 }
 
 .menu__nav a {
@@ -148,22 +142,30 @@ a {
 }
 
 .menu__contacts {
-  max-width: 1020px;
-  margin: 40px auto 0;
+  margin-top: 36px;
 
+  color: #fff;
+
+  font-family: Georgia, serif;
   font-size: 12px;
   font-weight: 700;
   line-height: 20px;
 }
 
+.menu__contacts p {
+  margin: 0 0 14px;
+}
+
 .menu__contacts a {
   display: inline-block;
 
-  margin-top: 8px;
-  padding-bottom: 6px;
+  margin-top: 2px;
+  padding-bottom: 5px;
 
   color: #fff;
 
+  font-size: 11px;
+  letter-spacing: 1px;
   text-decoration: none;
 
   border-bottom: 1px solid #fff;
@@ -181,7 +183,7 @@ a {
   font-family: Georgia, serif;
   font-size: 32px;
   font-weight: 700;
-  line-height: 32px;
+  line-height: 34px;
   text-align: center;
 }
 
@@ -189,38 +191,30 @@ a {
   text-align: left;
 }
 
-.section-description {
-  margin: 8px 0 40px;
-
-  font-size: 12px;
-  line-height: 18px;
-  text-align: center;
-}
-
 /* MUSEUM HOURS */
 
 .museum-hours {
   width: 100%;
-  max-width: 1020px;
   margin: 0 auto;
-  padding: 48px 20px 64px;
+  padding: 96px 20px 110px;
 }
 
 .museum-hours__subtitle {
-  margin: 0;
+  margin: 0 0 3px;
 
   color: #d12d35;
 
-  font-size: 12px;
+  font-family: Georgia, serif;
+  font-size: 10px;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 14px;
 }
 
 .museum-hours .section-title {
-  margin: 2px 0 32px;
+  margin-bottom: 34px;
 
-  font-size: 28px;
-  line-height: 32px;
+  font-size: 27px;
+  line-height: 30px;
   text-align: left;
   white-space: nowrap;
 }
@@ -231,7 +225,7 @@ a {
   font-family: Georgia, serif;
   font-size: 16px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 22px;
 }
 
 .museum-hours__row {
@@ -240,21 +234,29 @@ a {
 
   margin-bottom: 8px;
 
-  font-size: 12px;
+  font-family: Georgia, serif;
+  font-size: 11px;
   line-height: 18px;
 }
 
 .museum-hours__row strong {
   flex-shrink: 0;
 
-  width: 128px;
+  width: 124px;
 }
 
 .museum-hours__closed {
-  margin: 16px 0 28px;
+  margin: 18px 0 30px;
 
+  font-family: Georgia, serif;
   font-size: 11px;
-  line-height: 16px;
+  line-height: 18px;
+}
+
+.museum-hours__closed strong {
+  display: inline-block;
+
+  margin-bottom: 3px;
 }
 
 .museum-hours__closed:last-child {
@@ -265,30 +267,28 @@ a {
 
 .now-on-view {
   width: 100%;
-  max-width: 1020px;
   margin: 0 auto;
-  padding: 0 20px 72px;
+  padding: 0 20px 96px;
 }
 
 .now-on-view .section-title {
-  margin: 0;
-
-  font-size: 32px;
-  line-height: 32px;
-  text-align: center;
+  font-size: 31px;
+  line-height: 34px;
 }
 
+.section-description,
 .now-on-view .section-description {
-  max-width: 280px;
-  margin: 8px auto 40px;
+  max-width: 260px;
+  margin: 10px auto 44px;
 
-  font-size: 12px;
+  font-family: Georgia, serif;
+  font-size: 11px;
   line-height: 18px;
   text-align: center;
 }
 
 .exhibition {
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 }
 
 .exhibition__gallery {
@@ -296,20 +296,31 @@ a {
   gap: 8px;
 
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .exhibition__gallery--two {
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .exhibition__gallery--three {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.exhibition__gallery img {
+/* 2 IMAGES — DON'T CROP */
+
+.exhibition__gallery--two img {
   width: 100%;
-  height: 130px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* 3 IMAGES */
+
+.exhibition__gallery--three img {
+  width: 100%;
+  height: 88px;
 
   object-fit: cover;
 }
@@ -319,18 +330,18 @@ a {
 
   color: #d12d35;
 
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-family: Georgia, serif;
+  font-size: 13px;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 19px;
 }
 
 .exhibition__date {
   margin: 0;
 
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  line-height: 18px;
+  font-family: Georgia, serif;
+  font-size: 11px;
+  line-height: 17px;
 }
 
 /* BUTTON */
@@ -343,10 +354,13 @@ a {
   width: 100%;
   height: 56px;
 
+  padding: 0;
+
   color: #fff;
   background-color: #d12d35;
 
-  font-size: 14px;
+  font-family: Georgia, serif;
+  font-size: 12px;
   font-weight: 700;
   text-decoration: none;
 
@@ -356,34 +370,26 @@ a {
 
 .now-on-view .button {
   width: 100%;
-  height: 56px;
-  margin: 0;
-
-  font-size: 14px;
+  margin-top: 6px;
 }
 
 /* MORE TO EXPLORE */
 
 .explore {
   width: 100%;
-  max-width: 1020px;
   margin: 0 auto;
-  padding: 0 20px 64px;
+  padding: 0 20px 100px;
 }
 
 .explore .section-title {
-  max-width: 200px;
-  margin: 0 auto 28px;
+  margin-bottom: 44px;
 
-  font-family: Georgia, serif;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: center;
+  font-size: 31px;
+  line-height: 32px;
 }
 
 .explore-card {
-  margin: 0 0 40px;
+  margin-bottom: 52px;
 
   text-align: center;
 }
@@ -400,67 +406,64 @@ a {
 }
 
 .explore-card__title {
-  margin: 12px 0 6px;
+  margin: 18px 0 8px;
 
   color: #d12d35;
 
   font-family: Georgia, serif;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 18px;
-  text-align: center;
+  line-height: 24px;
 }
 
 .explore-card__text {
-  max-width: 250px;
+  max-width: 270px;
   margin: 0 auto;
 
-  font-family: Arial, sans-serif;
-  font-size: 10px;
-  line-height: 15px;
-  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 /* CONTACTS */
 
 .contacts {
   width: 100%;
-  max-width: 1020px;
   margin: 0 auto;
-  padding: 0 20px 72px;
+  padding: 0 20px 96px;
 }
 
 .contacts .section-title {
-  margin-bottom: 40px;
+  margin-bottom: 46px;
 
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 31px;
+  line-height: 34px;
 }
 
 .contacts__place {
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 
-  font-size: 12px;
-  line-height: 18px;
+  font-family: Georgia, serif;
+  font-size: 11px;
+  line-height: 17px;
 }
 
 .contacts__place h3 {
-  margin: 0 0 16px;
+  margin: 0 0 18px;
 
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-family: Georgia, serif;
+  font-size: 13px;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 19px;
 }
 
 .contacts__place p {
-  margin: 0 0 8px;
+  margin: 0 0 7px;
 }
 
 .contacts__place a {
   display: block;
 
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 
   color: #161616;
 
@@ -495,8 +498,8 @@ a {
   color: #161616;
   background-color: #f8f8fa;
 
-  font-family: Arial, sans-serif;
-  font-size: 12px;
+  font-family: Georgia, serif;
+  font-size: 10px;
 
   border: 0;
   outline: none;
@@ -524,9 +527,9 @@ a {
 
 .footer img {
   width: 100%;
-  height: 180px;
+  height: auto;
 
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* TABLET */
@@ -535,9 +538,6 @@ a {
   .header {
     height: 620px;
     padding: 40px 72px;
-
-    background-position: center;
-    background-size: cover;
   }
 
   .logo {
@@ -551,7 +551,7 @@ a {
   }
 
   .header__title {
-    margin-top: 170px;
+    margin-top: 165px;
 
     font-size: 56px;
     line-height: 56px;
@@ -578,16 +578,16 @@ a {
   }
 
   .museum-hours {
-  padding-top: 80px;
-  padding-bottom: 90px;
-}
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
 
-.section-title {
+  .section-title {
   font-size: 42px;
   line-height: 44px;
 }
 
-.museum-hours .section-title {
+  .museum-hours .section-title {
   font-size: 36px;
   line-height: 40px;
 }
@@ -599,7 +599,10 @@ a {
     line-height: 44px;
   }
 
-  .section-description {
+  .section-description,
+  .now-on-view .section-description {
+    max-width: 400px;
+
     font-size: 13px;
     line-height: 20px;
   }
@@ -612,8 +615,8 @@ a {
     gap: 16px;
   }
 
-  .exhibition__gallery img {
-    height: 220px;
+  .exhibition__gallery--three img {
+    height: 180px;
   }
 
   .red-title {
@@ -629,19 +632,6 @@ a {
   .button {
     max-width: 324px;
     margin: 0 auto;
-  }
-
-  .explore .section-title {
-    max-width: none;
-  }
-
-  .explore-card__image {
-    height: 360px;
-  }
-
-  .explore-card__title {
-    font-size: 20px;
-    line-height: 28px;
   }
 
   .explore-card__text {
@@ -666,10 +656,6 @@ a {
 
     margin-top: 0;
   }
-
-  .footer img {
-    height: 300px;
-  }
 }
 
 /* DESKTOP */
@@ -682,37 +668,28 @@ a {
     background-position: center 38%;
   }
 
-  .header__top {
-    max-width: 1020px;
-  }
-
   .header__title {
-    margin-top: 150px;
+    margin-top: 145px;
 
     font-size: 58px;
     line-height: 60px;
   }
 
   .museum-hours {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    max-width: 1020px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .now-on-view,
+  .explore,
+  .contacts {
+    max-width: 1020px;
   }
 
   .museum-hours .section-title {
     font-size: 38px;
     line-height: 42px;
-  }
-
-  .museum-hours__place {
-    font-size: 17px;
-  }
-
-  .museum-hours__row {
-    font-size: 13px;
-  }
-
-  .now-on-view {
-    padding-bottom: 90px;
   }
 
   .now-on-view .section-title,
@@ -726,7 +703,7 @@ a {
     gap: 20px;
   }
 
-  .exhibition__gallery img {
+  .exhibition__gallery--three img {
     height: 280px;
   }
 
@@ -735,21 +712,17 @@ a {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 
-    padding-bottom: 100px;
+    padding-bottom: 120px;
   }
 
   .explore .section-title {
     grid-column: 1 / -1;
 
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .explore-card {
     margin-bottom: 0;
-  }
-
-  .explore-card__image {
-    height: 300px;
   }
 
   .explore-card__title {
@@ -764,14 +737,10 @@ a {
   .contacts {
     grid-template-columns: 1fr 1fr 1.3fr;
 
-    padding-bottom: 100px;
+    padding-bottom: 120px;
   }
 
   .contact-form {
     grid-column: auto;
-  }
-
-  .footer img {
-    height: 360px;
   }
 }
