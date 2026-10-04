@@ -1,382 +1,300 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="page">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyBike</title>
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-
-    <title>THE MET</title>
-
+    <link rel="icon" href="./src/images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      rel="stylesheet"
-      href="src/styles/main.scss"
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
     />
-
-    <script
-      src="src/scripts/main.js"
-      defer
-    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles/main.scss" />
   </head>
 
-  <body>
-    <header
-      class="header"
-      id="home"
-    >
-      <div class="header__top">
+  <body class="page__body">
+    <header class="header" id="home">
+      <div class="top-bar header__top">
         <a
-          class="logo"
+          class="top-bar__logo"
           href="#home"
+          aria-label="MyBike home"
         >
-          THE<br />
-          MET
+          MyBiKE
         </a>
 
-        <div class="header__icons">
+        <div class="top-bar__actions">
           <a
-            class="header__phone"
-            href="tel:+12125357710"
+            class="top-bar__phone"
+            href="tel:+12345555555"
+            aria-label="Call MyBike"
           >
-            ☎
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6.6 10.8c1.7 3.3 3.3 4.9 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.7 3.8.7.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.8 21 3 13.2 3 3.7c0-.6.4-1 1-1h3.3c.6 0 1 .4 1 1 0 1.3.2 2.6.7 3.8.1.4 0 .8-.2 1.1l-2.2 2.2Z"
+              />
+            </svg>
+            <span class="top-bar__phone-text">+1 234 5555-55-55</span>
           </a>
 
           <a
-            class="header__menu-button"
+            class="top-bar__menu"
             href="#menu"
+            aria-label="Open menu"
           >
-            ☰
+            <span></span>
+            <span></span>
+            <span></span>
           </a>
         </div>
       </div>
 
-      <h1 class="header__title">
-        WELCOME<br />
-        TO THE MET
-      </h1>
+      <h1 class="header__title">Take the Streets</h1>
     </header>
 
-    <aside
-      class="menu"
-      id="menu"
-    >
-      <div class="menu__top">
-        <a
-          class="logo"
-          href="#home"
-        >
-          THE<br />
-          MET
-        </a>
-
+    <aside class="menu page__menu" id="menu">
+      <div class="top-bar menu__top">
+        <a class="top-bar__logo" href="#home">MyBiKE</a>
         <a
           class="menu__close"
           href="#home"
-        >
-          ×
-        </a>
+          aria-label="Close menu"
+        ></a>
       </div>
 
       <nav class="menu__nav">
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT US</a>
-        <a href="#now-on-view">NOW ON VIEW</a>
-        <a href="#explore">EXPLORE ONLINE</a>
-        <a href="#contacts">CONTACTS</a>
+        <a class="menu__link" href="#home">Home</a>
+        <a class="menu__link" href="#about">About us</a>
+        <a class="menu__link" href="#compare">Compare Bikes</a>
+        <a class="menu__link" href="#details">Details</a>
+        <a class="menu__link" href="#contacts">Contacts</a>
       </nav>
 
-      <div class="menu__contacts">
-        <p>
-          THE MET FIFTH AVENUE<br />
-          +1 212-535-7710
-        </p>
-
-        <p>
-          THE MET CLOISTERS<br />
-          +1 212-923-3700
-        </p>
-
-        <a href="tel:+12125357710">CALL TO ORDER</a>
-      </div>
+      <a class="menu__phone" href="tel:+12345555555">+1 234 5555-55-55</a>
+      <a class="menu__call" href="tel:+12345555555">Book a test ride</a>
     </aside>
 
     <main class="main">
-      <section
-        class="museum-hours"
-        id="about"
-      >
-        <p class="museum-hours__subtitle">PLAN YOUR VISIT</p>
-
-        <h2 class="section-title section-title--left">
-          MUSEUM HOURS
-        </h2>
-
-        <h3 class="museum-hours__place">
-          THE MET FIFTH AVENUE
-        </h3>
-
-        <div class="museum-hours__row">
-          <strong>10 AM - 5 PM</strong>
-          <span>SUN, MON, TUE, THU</span>
+      <section class="about" id="about">
+        <div class="container about__content">
+          <h2 class="about__title">Move Free</h2>
+          <p class="about__text">
+            Shift your ride, not gears. Find the fastest way to move in the city
+            as the bike adapts intuitively to power the speed you need.
+          </p>
         </div>
-
-        <div class="museum-hours__row">
-          <strong>10 AM - 9 PM</strong>
-          <span>FRI, SAT</span>
-        </div>
-
-        <div class="museum-hours__row">
-          <strong>CLOSED</strong>
-          <span>WEN</span>
-        </div>
-
-        <p class="museum-hours__closed">
-          <strong>CLOSED ON</strong><br />
-          THANKSGIVING DAY, DEC 25, JAN 1, AND THE FIRST MONDAY IN MAY.
-        </p>
-
-        <h3 class="museum-hours__place">
-          THE MET CLOISTERS
-        </h3>
-
-        <div class="museum-hours__row">
-          <strong>10 AM - 4.30 PM</strong>
-          <span>THU - TUE</span>
-        </div>
-
-        <div class="museum-hours__row">
-          <strong>CLOSED</strong>
-          <span>WEN</span>
-        </div>
-
-        <p class="museum-hours__closed">
-          <strong>CLOSED ON</strong><br />
-          THANKSGIVING DAY, DEC 25, JAN 1
-        </p>
       </section>
 
-      <section
-        class="now-on-view"
-        id="now-on-view"
-      >
-        <h2 class="section-title">NOW ON VIEW</h2>
+      <section class="compare" id="compare">
+        <div class="container">
+          <h2 class="section-title">Compare Bikes</h2>
 
-        <p class="section-description">
-          EXPLORE EXHIBITION GALLERY GUIDES, VIDEOS, ARTICLES, AND MORE.
-        </p>
+          <div class="compare__grid">
+            <article class="bike-card">
+              <a class="bike-card__image-link" href="#">
+                <img
+                  class="bike-card__image"
+                  src="./src/images/bike-sporty.png"
+                  alt="Sporty 4 bicycle"
+                />
+              </a>
+              <h3 class="bike-card__title">Sporty 4</h3>
+              <p class="bike-card__text">
+                The iconic frame brought to a new performance height as a sporty,
+                active ride.
+              </p>
+              <p class="bike-card__price">$ 2 590</p>
+            </article>
 
-        <article class="exhibition">
-          <div class="exhibition__gallery exhibition__gallery--two">
-            <img
-              src="src/images/Layer 46@1,5x.png"
-              alt="Old Masters"
-            />
+            <article class="bike-card">
+              <a class="bike-card__image-link" href="#">
+                <img
+                  class="bike-card__image"
+                  src="./src/images/bike-town.png"
+                  alt="Ride in town ST bicycle"
+                />
+              </a>
+              <h3 class="bike-card__title">Ride in town ST</h3>
+              <p class="bike-card__text">
+                An open frame for an upright riding position as the most
+                comfortable ride in town.
+              </p>
+              <p class="bike-card__price">$ 2 590</p>
+            </article>
 
-            <img
-              src="src/images/Layer 47@1,5x.png"
-              alt="Portrait"
-            />
+            <article class="bike-card">
+              <a class="bike-card__image-link" href="#">
+                <img
+                  class="bike-card__image"
+                  src="./src/images/bike-agile.png"
+                  alt="Agile ride 3 bicycle"
+                />
+              </a>
+              <h3 class="bike-card__title">Agile ride 3</h3>
+              <p class="bike-card__text">
+                The lightweight frame that has earned its street tread as a
+                sleek, agile ride.
+              </p>
+              <p class="bike-card__price">$ 2 090</p>
+            </article>
           </div>
-
-          <h3 class="red-title">
-            A NEW LOOK AT OLD MASTERS
-          </h3>
-
-          <p class="exhibition__date">
-            DECEMBER 12, 2020 – THROUGH SPRING 2023
-          </p>
-        </article>
-
-        <article class="exhibition">
-          <div class="exhibition__gallery exhibition__gallery--three">
-            <img
-              src="src/images/Layer 48@1,5x-2.png"
-              alt="Mandala"
-            />
-
-            <img
-              src="src/images/Layer 48@1,5x.png"
-              alt="Bodhisattva"
-            />
-
-            <img
-              src="src/images/Layer 50@1,5x.png"
-              alt="Buddhist art"
-            />
-          </div>
-
-          <h3 class="red-title">
-            BODHISATTVAS OF WISDOM, COMPASSION, AND POWER
-          </h3>
-
-          <p class="exhibition__date">
-            MARCH 27, 2021 – OCTOBER 30, 2022
-          </p>
-        </article>
-
-        <article class="exhibition">
-          <div class="exhibition__gallery exhibition__gallery--two">
-            <img
-              src="src/images/Layer 49@1,5x.png"
-              alt="Decorative figurine"
-            />
-
-            <img
-              src="src/images/Layer 51@1,5x.png"
-              alt="Decorative arts"
-            />
-          </div>
-
-          <h3 class="red-title">
-            INSPIRING WALT DISNEY: THE ANIMATION OF FRENCH DECORATIVE ARTS
-          </h3>
-
-          <p class="exhibition__date">
-            DECEMBER 10, 2021 – MARCH 6, 2022
-          </p>
-        </article>
-
-        <a
-          class="button"
-          href="#now-on-view"
-        >
-          VIEW ALL EXHIBITIONS
-        </a>
+        </div>
       </section>
 
-      <section
-        class="explore"
-        id="explore"
-      >
-        <h2 class="section-title">
-          MORE TO EXPLORE<br />
-          ONLINE
-        </h2>
+      <section class="details" id="details">
+        <div class="container">
+          <h2 class="section-title">The Details</h2>
 
-        <article class="explore-card">
-          <img
-            class="explore-card__image"
-            src="src/images/Layer 51@1,5x-2.png"
-            alt="Collection areas"
-          />
+          <article class="detail-card">
+            <div class="detail-card__gallery detail-card__gallery--wide-left">
+              <a class="detail-card__image-link" href="#">
+                <img
+                  src="./src/images/details-unlock-wide.png"
+                  alt="MyBike phone app mounted on the handlebar"
+                />
+              </a>
+              <a class="detail-card__image-link" href="#">
+                <img
+                  src="./src/images/details-unlock-small.png"
+                  alt="MyBike handlebar detail"
+                />
+              </a>
+            </div>
+            <h3 class="detail-card__title">Auto Unlock</h3>
+            <p class="detail-card__text">
+              The app senses when you're nearby to unlock automatically. GPS
+              tracking so you know where your bike is and can track it anytime.
+            </p>
+          </article>
 
-          <h3 class="explore-card__title">
-            COLLECTION AREAS
-          </h3>
+          <article class="detail-card">
+            <div class="detail-card__gallery detail-card__gallery--wide-left">
+              <a class="detail-card__image-link" href="#">
+                <img
+                  src="./src/images/details-lights-wide.png"
+                  alt="MyBike integrated rear light"
+                />
+              </a>
+              <a class="detail-card__image-link" href="#">
+                <img
+                  src="./src/images/details-lights-small.png"
+                  alt="MyBike integrated front light"
+                />
+              </a>
+            </div>
+            <h3 class="detail-card__title">Range &amp; Integrated lights</h3>
+            <p class="detail-card__text">
+              The removable battery has up to 70km battery autonomy and weighs
+              only 2.4 kg. Lights integrated into the frame give you always-on
+              visibility day and night.
+            </p>
+          </article>
 
-          <p class="explore-card__text">
-            These collection areas study, exhibit, and care for the objects in
-            The Met collection.
-          </p>
-        </article>
+          <article class="detail-card">
+            <div class="detail-card__gallery detail-card__gallery--wide-right">
+              <a class="detail-card__image-link" href="#">
+                <img
+                  src="./src/images/details-brakes-small.png"
+                  alt="MyBike hydraulic brake lever"
+                />
+              </a>
+              <a class="detail-card__image-link" href="#">
+                <img
+                  src="./src/images/details-brakes-wide.png"
+                  alt="MyBike lightweight frame detail"
+                />
+              </a>
+            </div>
+            <h3 class="detail-card__title">
+              Hydraulic disc brakes &amp; Lightweight
+            </h3>
+            <p class="detail-card__text">
+              Brakes with total stopping power the second you make contact. The
+              removable battery has up to 70km battery autonomy and weighs only
+              2.4 kg. Lights integrated into the frame give you always-on
+              visibility day and night.
+            </p>
+          </article>
 
-        <article class="explore-card">
-          <img
-            class="explore-card__image"
-            src="src/images/Layer 51@1,5x-3.png"
-            alt="Travel"
-          />
-
-          <h3 class="explore-card__title">
-            TRAVEL
-          </h3>
-
-          <p class="explore-card__text">
-            Travel with The Met connects the Museum's wide and diverse audience
-            to art, inspiration, and historical perspective.
-          </p>
-        </article>
-
-        <article class="explore-card">
-          <img
-            class="explore-card__image"
-            src="src/images/Layer 51@1,5x-4.png"
-            alt="Virtual group tours"
-          />
-
-          <h3 class="explore-card__title">
-            VIRTUAL GROUP TOURS
-          </h3>
-
-          <p class="explore-card__text">
-            Request a guided tour, reserve admission and lead your own small
-            group, or request a live virtual tour led by a Museum guide.
-          </p>
-        </article>
+          <a class="button details__button" href="#contacts">Explore</a>
+        </div>
       </section>
 
-      <section
-        class="contacts"
-        id="contacts"
-      >
-        <h2 class="section-title">
-          CONTACT US
-        </h2>
+      <section class="contacts" id="contacts">
+        <div class="container">
+          <h2 class="section-title">Contact us</h2>
 
-        <div class="contacts__place">
-          <h3>THE MET FIFTH AVENUE</h3>
+          <div class="contacts__content">
+            <form
+              class="contacts__form"
+              action="#"
+              onsubmit="this.reset(); return false;"
+            >
+              <input
+                class="contacts__field"
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+              />
+              <input
+                class="contacts__field"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+              <textarea
+                class="contacts__field contacts__field--message"
+                name="message"
+                placeholder="Message"
+                required
+              ></textarea>
+              <button class="button contacts__button" type="submit">Send</button>
+            </form>
 
-          <p class="contacts__label">Phone</p>
-          <a href="tel:+12125357710">
-            +1 212-535-7710
-          </a>
+            <address class="contacts__info">
+              <div class="contacts__item">
+                <span class="contacts__label">Phone</span>
+                <a class="contacts__link" href="tel:+12345555555">
+                  +1 234 5555-55-55
+                </a>
+              </div>
 
-          <p class="contacts__label">Address</p>
-          <p>
-            1000 Fifth Avenue<br />
-            New York, NY 10028
-          </p>
+              <div class="contacts__item">
+                <span class="contacts__label">Email</span>
+                <a class="contacts__link" href="mailto:hello@miami.com">
+                  hello@miami.com
+                </a>
+              </div>
+
+              <div class="contacts__item">
+                <span class="contacts__label">Address</span>
+                <a
+                  class="contacts__link"
+                  href="https://maps.google.com/?q=400+First+Ave+Suite+700+Minneapolis+MN+55401"
+                  target="_blank"
+                >
+                  400 first ave.<br />
+                  suite 700<br />
+                  Minneapolis, MN 55401
+                </a>
+              </div>
+            </address>
+          </div>
         </div>
-
-        <div class="contacts__place">
-          <h3>THE MET CLOISTERS</h3>
-
-          <p class="contacts__label">Phone</p>
-          <a href="tel:+12129233700">
-            +1 212-923-3700
-          </a>
-
-          <p class="contacts__label">Address</p>
-          <p>
-            99 Margaret Corbin Drive<br />
-            Fort Tryon Park<br />
-            New York, NY 10040
-          </p>
-        </div>
-
-        <form
-          class="contact-form"
-          action="#"
-        >
-          <input
-            type="text"
-            placeholder="Name"
-          />
-
-          <input
-            type="email"
-            placeholder="Email"
-          />
-
-          <textarea placeholder="Message"></textarea>
-
-          <button
-            class="button"
-            type="submit"
-          >
-            SEND
-          </button>
-        </form>
       </section>
     </main>
 
-    <footer class="footer">
-      <img
-        src="src/images/image 1.png"
-        alt="The Met"
-      />
-    </footer>
+    <footer class="footer" aria-label="Cyclists crossing a street"></footer>
+
+    <script type="module" src="./src/scripts/main.js"></script>
   </body>
 </html>
