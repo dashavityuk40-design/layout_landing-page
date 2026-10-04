@@ -160,7 +160,7 @@ textarea {
 
 .header {
   position: relative;
-  height: 711px;
+  height: 100vh;
   overflow: hidden;
   background-image: url('../images/hero.png');
   background-position: center 48%;
@@ -576,6 +576,9 @@ textarea {
 
   .footer {
     height: 480px;
+    position: sticky;
+    bottom: 0;
+    z-index: -1;
   }
 }
 
